@@ -11,10 +11,21 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-clip: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.Hero h1, h3 {
+    z-index: 2;
+    margin: 0 0 2vh 5vw;
+    
+}
+.Hero h1 {
+    font-size: 4rem;
 }
 .Categories {
     margin: 1rem 0;
-    height: 60vh;
+    height: 70vh;
     width: 25vw;
     overflow-y: scroll;
 }
@@ -33,6 +44,66 @@ body {
 .CategoryCard img{
     height: 100%;
 }
+.mainContainer {
+    display: flex;
+}
+.inputPlatillos {
+    width: 80%;
+    margin: 1rem .5rem;
+    border-radius: 1rem;
+    padding: .5rem .8rem;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #1F2437;
+    color: white;
+    height: 5vh;
+    font-size: 2rem;
+}
+.containerplatillos {
+    width: 70vw;
+    height: 60vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.PlatilloCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: #394050;
+    width: 20vw;
+    height: 40vh;
+    padding: .5rem;
+}
+.PlatilloCard img {
+    width: 100%;
+    height: 70%;
+    border-radius: .5rem;
+}
+.CategoryCard.active {
+  background-color: #FEBD2F;
+  color: black;
+}
+.detalle-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  background: #1F2437;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.detalle-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
 .CategoryCard:hover {
     background-color: #FEBD2F;
     color: black;
@@ -42,7 +113,7 @@ body {
     position: absolute;
     width: 100%;
     height: 70vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 /*custom scroll*/
@@ -58,4 +129,31 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-track {
   background-color: #0E1326;
+}
+.btn-orden-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .btn-orden-toggle {
+    display: block !important;
+  }
+  .Categories {
+    width: 100%;
+  }
+  .CategoryCard {
+    width: 80%;
+    margin: 2rem auto;
+    justify-content: space-around;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .containerplatillos {
+    width: 100%;
+  }
+  .PlatilloCard {
+    width: 40%;
+  }
 }
