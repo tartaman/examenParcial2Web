@@ -57,7 +57,7 @@ function DetallePlatillo() {
       </ul>
 
       <h2 style={{textAlign:"center"}}>Instrucciones</h2>
-      <p style={{textAlign:"justify"}}>{platillo.strInstructions}</p>
+      <p style={{textAlign:"justify", padding:"1rem 2rem "}}>{platillo.strInstructions}</p>
     </div>
   );
 }
